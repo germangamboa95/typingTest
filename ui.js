@@ -42,4 +42,16 @@ class UI {
     spans[num].classList.add('red');
   }
 
+  results(time, wordCount) {
+    let result = document.getElementById('results');
+    const wpm = 47 / (time / 60);
+    result.innerHTML = `
+      <h2>This is your score</h2>
+      <ul>
+        <li>You missed: ${wordCount} words.</li>
+        <li>Your WPM: ${wpm}.</li>
+      </ul>
+    `;
+  }
+
 }

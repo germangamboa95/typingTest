@@ -40,15 +40,14 @@ window.onload = (e) => {
           game.getWord(counter);
           ui.colorWordCurrent(counter);
           ui.userText().value = '';
+          if(counter === max){
+            console.log('Game OVER');
+
+            ui.results(game.endTimer(), game.wrongWords);
+
+          }
         }
       }
-      else{
-        console.log('Game OVER');
-        console.log(game.endTimer());
-        console.log(game.wrongWords);
-
-      }
-
 
     }
   );
