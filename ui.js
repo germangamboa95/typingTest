@@ -28,16 +28,17 @@ class UI {
     cur.innerHTML = text;
   }
 
-  colorWord(num) {
+  colorWordCurrent(num) {
     let spans = document.querySelectorAll('span');
     spans[num].classList.add('green');
     if(!num-1){
       spans[num-1].classList.remove('green');
     }
   }
+  colorWordWrong(num) {
+    let spans = document.querySelectorAll('span');
+    spans[num].classList.add('red');
 
-
-
-
+  }
 
 }

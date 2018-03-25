@@ -11,6 +11,7 @@ class gameLogic {
 
   checkWord (word) {
 
+    console.log(word, this.cpuWord);
     let test = word.trim() == this.cpuWord;
     if (test) {
 
@@ -20,6 +21,10 @@ class gameLogic {
       console.log('booo');
       return false;
     }
+  }
+
+  gameLen() {
+    return this.words.length;
   }
 
 }
