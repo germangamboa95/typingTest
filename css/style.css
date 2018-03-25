@@ -1,7 +1,10 @@
 body {
   background-color: #f9f9f9;
 }
-
+footer{
+  background-color: #000;
+  color: #fff;
+}
 .green {
   color: green;
 }
@@ -47,4 +50,17 @@ body {
   width: 10em;
   display: block;
   box-shadow: inset 0px 0px 3px 0px;
+}
+
+
+.content {
+  min-height: calc(100vh - 70px);
+}
+.footer {
+  height: 50px;
+  text-align: center;
+  padding-bottom: 1.5em;
+}
+.footer p{
+  padding-top: 1em;
 }

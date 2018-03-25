@@ -18,8 +18,8 @@ window.onload = (e) => {
   ui.userText().addEventListener(
     'focus',
     (e) => {
-      initTime = Date.now();
-      console.log(initTime);
+      game.startTimer();
+
     }
   );
 
@@ -29,7 +29,7 @@ window.onload = (e) => {
 
 
       console.log(e.key);
-      if (counter < max - 1) {
+      if (counter < max) {
         if (e.key === ' ') {
 
           if (!game.checkWord(ui.userText().value)) {
@@ -42,10 +42,13 @@ window.onload = (e) => {
           ui.userText().value = '';
         }
       }
-
       else{
-        console.log((initTime - Date.now())/1000);
+        console.log('Game OVER');
+        console.log(game.endTimer());
+        console.log(game.wrongWords);
+
       }
+
 
     }
   );

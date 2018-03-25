@@ -30,7 +30,9 @@ class UI {
 
   colorWordCurrent(num) {
     let spans = document.querySelectorAll('span');
-    spans[num].classList.add('green');
+    if(spans[num]){
+      spans[num].classList.add('green');
+    }
     if(!num-1){
       spans[num-1].classList.remove('green');
     }
@@ -38,7 +40,6 @@ class UI {
   colorWordWrong(num) {
     let spans = document.querySelectorAll('span');
     spans[num].classList.add('red');
-
   }
 
 }

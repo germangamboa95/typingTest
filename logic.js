@@ -2,6 +2,10 @@ class gameLogic {
   constructor(words){
     this.words = words.split(' ');
     this.cpuWord;
+    this.initTime;
+    this.endTime;
+    this.totaltime;
+    this.wrongWords = 0;
   }
 
   getWord(pos) {
@@ -18,7 +22,7 @@ class gameLogic {
       console.log("you got it right");
       return true;
     } else {
-      console.log('booo');
+      this.wrongWords++;
       return false;
     }
   }
@@ -26,5 +30,16 @@ class gameLogic {
   gameLen() {
     return this.words.length;
   }
+
+  startTimer(){
+    this.initTime =  Date.now();
+  }
+
+  endTimer(){
+    this.endTime =  Date.now();
+    return (this.endTime - this.initTime)/1000;
+  }
+
+
 
 }
