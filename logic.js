@@ -1,44 +1,26 @@
-
-
-const wordList = ['German', 'is', 'awesome', 'cat', 'bootcamp', 'UCF', "bootstrap", "codepen", "classroom", "image"];
-
-
-
-
-let checkWord = (word) => {
-  let test = word == cpuWord + ' ';
-
-  if (test) {
-    console.log("you got it right");
-  } else {
-    console.log('booo');
+class gameLogic {
+  constructor(words){
+    this.words = words.split('');
+    this.cpuWord;
   }
-  userInput.value = "";
-  cpuWord = getWord(wordList);
-};
 
-let userWord = (word) => {
-  let userWord = userInput.value;
-  return userWord;
-};
-let getWord = (wordList) => {
-  let rand = (num) => Math.floor(Math.random() * num);
-  let word = '';
-  let listLen = wordList.length;
-  word = wordList[rand(listLen)];
-  console.log(word);
-  return word;
-};
+  getWord() {
+    let listLen = wordList.length;
+    let rand = (num) => Math.floor(Math.random() * num);
+    this.cputWord = wordList[rand(listLen)];
+  }
 
-let userInput = document.getElementById('user-input');
-
-
-let cpuWord = getWord(wordList);
-userInput.addEventListener(
-  'keyup',
-  (e) => {
-    let word = userWord();
-    if (e.key === ' ') {
-      checkWord(word);
+  checkWord (word) {
+    let test = word.trim() == this.cpuWord.trim();
+    if (test) {
+      userInput.value = "";
+      console.log("you got it right");
+      return true;
+    } else {
+      userInput.value = "";
+      console.log('booo');
+      return false;
     }
-  });
+  }
+
+}
