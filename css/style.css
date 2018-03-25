@@ -1,0 +1,38 @@
+body{
+  background-color: #f9f9f9;
+}
+.green {
+  color: green;
+}
+
+.intro {
+  border: 1px solid;
+  background-image: url('../img/typewriter.jpeg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 25em;
+}
+
+.intro .banner {
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+}
+
+#app {
+  margin: 3em auto;
+}
+
+#word-display {
+  margin: 0 auto;
+  width: 80%;
+  border: 1px solid gray;
+  padding: .25em;
+}
+
+#user-input{
+  margin: 1em auto;
+  width: 10em;
+  display: block;
+}
