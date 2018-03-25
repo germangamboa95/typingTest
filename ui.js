@@ -32,6 +32,7 @@ class UI {
     let spans = document.querySelectorAll('span');
     if(spans[num]){
       spans[num].classList.add('green');
+  
     }
     if(!num-1){
       spans[num-1].classList.remove('green');
