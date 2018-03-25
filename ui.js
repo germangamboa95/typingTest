@@ -15,7 +15,7 @@ class UI {
   }
 
   userText() {
-    return document.getElementById(this.userInput).value;
+    return document.getElementById(this.userInput);
   }
 
   splitWords(){
