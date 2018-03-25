@@ -44,7 +44,7 @@ class UI {
 
   results(time, wordCount) {
     let result = document.getElementById('results');
-    const wpm = 47 / (time / 60);
+    const wpm = Math.floor(47 / (time / 60));
     result.innerHTML = `
       <h2>This is your score</h2>
       <ul>
