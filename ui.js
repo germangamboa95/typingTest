@@ -64,7 +64,9 @@ class UI {
       timeSpent = parseInt((Date.now() - time) / 1000);
       container.innerText = timeSpent;
     } , 100);
+    document.getElementById('restart').style.display = "block";
     return timer;
+
   }
 
   timerStop(timeId){
