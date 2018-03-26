@@ -46,8 +46,8 @@ class UI {
   results(time, wordCount) {
     let result = document.getElementById('results');
     const wpm = Math.floor(47 / (time / 60));
-    result.innerHTML = `
-      <h2>This is your score</h2>
+    result.innerHTML += `
+
       <ul>
         <li>You missed: ${wordCount} words.</li>
         <li>Your WPM: ${wpm}.</li>
@@ -55,7 +55,7 @@ class UI {
     `;
   }
 
-  timerDisplay(time , stop){
+  timerDisplay(time){
 
     let container = document.getElementById('timer');
     let timeSpent = 0;
@@ -68,8 +68,12 @@ class UI {
   }
 
   timerStop(timeId){
-    console.log(timeId, ": is stopping.");
     clearInterval(timeId);
+  }
+
+  clearTimer() {
+    let container = document.getElementById('timer');
+    container.innerText = 0;
   }
 
 

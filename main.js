@@ -31,6 +31,7 @@ function mainController(e){
       ui.userText().value = '';
       if (counter === max) {
         ui.timerStop(uiTimer);
+
         ui.results(game.endTimer(), game.wrongWords);
       }
     }
@@ -39,5 +40,14 @@ function mainController(e){
 
   ui.userText().addEventListener('focus', gameInit);
   ui.userText().addEventListener('keyup', e => mainController(e));
+  document.getElementById('restart').addEventListener('click', ()=> {
+    counter = 0;
+    ui.timerStop(uiTimer);
+    ui.clearTimer();
+    ui.displayList();
+    ui.splitWords();
+    game.wrongWords = 0;
 
+
+  });
 };
