@@ -32,7 +32,7 @@ class UI {
     let spans = document.querySelectorAll('span');
     if(spans[num]){
       spans[num].classList.add('green');
-  
+
     }
     if(!num-1){
       spans[num-1].classList.remove('green');
@@ -54,5 +54,23 @@ class UI {
       </ul>
     `;
   }
+
+  timerDisplay(time , stop){
+
+    let container = document.getElementById('timer');
+    let timeSpent = 0;
+    console.log(time);
+    const timer = setInterval(() => {
+      timeSpent = parseInt((Date.now() - time) / 1000);
+      container.innerText = timeSpent;
+    } , 100);
+    return timer;
+  }
+
+  timerStop(timeId){
+    console.log(timeId, ": is stopping.");
+    clearInterval(timeId);
+  }
+
 
 }

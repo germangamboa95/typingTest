@@ -49,10 +49,15 @@ footer{
 #user-input {
   margin: 1em auto;
   width: 10em;
-  display: block;
+  display: inline-block;
   box-shadow: inset 0px 0px 3px 0px;
 }
+.center{
+  margin: 0 auto;
+  width: 14em;
+  position: relative;
 
+}
 
 .content {
   min-height: calc(100vh - 70px);
@@ -64,4 +69,12 @@ footer{
 }
 .footer p{
   padding-top: 1em;
+}
+
+#timer{
+  margin-left: .25em;
+  display: inline-block;
+  position: absolute;
+  top: 11%;
+
 }
